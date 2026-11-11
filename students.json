@@ -1,8 +1,7 @@
 [
-    { "name": "Amina", "email": "amina@example.com", "course": "Computer Science", "year": 2 },
-    { "name": "Brian", "email": "brian@example.com", "course": "Business Studies", "year": 1 },
-    { "name": "Cynthia", "email": "cynthia@example.com", "course": "Data Science", "year": 3 },
-    { "name": "David", "email": "david@example.com", "course": "Computer Science", "year": 4 },
-    { "name": "Esther", "email": "esther@example.com", "course": "Statistics", "year": 2 }
+    { "name": "Amina", "email": "amina@aston.ac.ke", "course": "Computer Science", "year": 2 },
+    { "name": "Brian", "email": "brian@aston.ac.ke", "course": "Business Studies", "year": 1 },
+    { "name": "Cynthia", "email": "cynthia@aston.ac.ke", "course": "Data Science", "year": 3 },
+    { "name": "David", "email": "david@aston.ac.ke", "course": "Computer Science", "year": 4 },
+    { "name": "Esther", "email": "esther@aston.ac.ke", "course": "Statistics", "year": 2 }
 ]
-   
