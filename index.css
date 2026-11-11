@@ -1,0 +1,109 @@
+/* Class selectors start with a dot */
+.site-header {
+    background-color: #1a3c6e;
+    color: white;
+    padding: 10px 20px;
+}
+
+.site-header h2 {
+    color: white;
+}
+
+.main-nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.main-nav a:hover,:visited{
+text-decoration: underline;
+color:#ff6b6b
+}
+
+.content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.site-footer {
+    /* add: text-align, padding, background-color */
+    text-align: center;
+    padding: 15%;
+    background-color: #1a3c6e;
+    color:white;
+}
+
+/* Id selector starts with a hash */
+#banner {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Timetable */
+.timetable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.timetable th,
+.timetable td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+
+.timetable thead th {
+    background-color: #1a3c6e;
+    color: white;
+}
+
+.break {
+    background-color: #ffe9a8;
+}
+
+/* Registration form */
+.form {
+    /* add: max-width, padding, background-color: white */
+    max-width:500px;
+    padding: 20px;
+    background-color: white;
+    margin:0 auto;
+}
+
+.form label {
+    display: block;
+    margin-top: 12px;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="date"],
+.form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+.btn-submit {
+    /* add: background-color, color, padding, border, cursor: pointer */
+background-color: #999;
+color:whitesmoke;
+padding: 12px 20px;
+border:none;
+cursor: pointer;
+margin-top: 15px;
+
+}
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.announcements {
+    background-color: white;
+    padding: 15px 20px;
+    border-left: 5px solid #1a3c6e;
+    margin: 15px 0;
+}
