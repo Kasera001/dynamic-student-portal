@@ -1,0 +1,7 @@
+[
+    { "name": "Amina", "course": "Computer Science", "year": 2 },
+    { "name": "Brian", "course": "Business Studies", "year": 1 },
+    { "name": "Cynthia", "course": "Data Science", "year": 3 },
+    { "name": "David", "course": "Computer Science", "year": 4 },
+    { "name": "Esther", "course": "Statistics", "year": 2 }
+]

@@ -40,34 +40,56 @@ if (form) {
         }
 
     });
+}
 // ---------- Lab 8: functions, events and arrays ----------
+// An object holds related data as key: value pairs
+// Example: { name: "Amina", course: "Computer Science", year: 2 }
+// Read a property with a dot: student.name
 
-// An array: a list of values inside square brackets
-const students = ["Amina", "Brian", "Cynthia", "David", "Esther"];
-
-// A function that adds ONE student to the page
-function addStudentToPage(name) {
-    const list = document.getElementById("student-list");  // find the <ul>
-    const item = document.createElement("li");             // make a new <li>
-    item.textContent = name;                               // put the name inside it
-    list.appendChild(item);                                // add it to the <ul>
+// Add ONE student (now an object, not a plain string)
+function addStudentToPage(student) {
+    const list = document.getElementById("student-list");
+    const item = document.createElement("li");
+    item.textContent = student.name + " - " + student.course + " (Year " + student.year + ")";
+    list.appendChild(item);
 }
 
-// A function that shows ALL students
+// Show ALL students and update the heading with the total
 function displayAllStudents(students) {
     const list = document.getElementById("student-list");
-    list.innerHTML = "";                                   // empty the list first
+    list.innerHTML = "";
 
     for (let i = 0; i < students.length; i++) {
-        addStudentToPage(students[i]);                     // one name per pass
+        addStudentToPage(students[i]);
+    }
+
+    document.getElementById("student-count").textContent =
+        "Registered Students (" + students.length + ")";
+}
+
+// Fetch the JSON file, then display it
+async function loadStudents() {
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = "";
+
+    try {
+        const response = await fetch("students.json");
+
+        if (!response.ok) {
+            throw new Error("Server answered with status " + response.status);
+        }
+
+        const students = await response.json();
+        displayAllStudents(students);
+    } catch (error) {
+        console.error("Fetch failed:", error);
+        errorMessage.textContent = "Sorry, the student list could not be loaded.";
     }
 }
 
-// Run displayAllStudents when the button is clicked
+// Run it when the button is clicked
 const showButton = document.getElementById("show-students");
 
 if (showButton) {
-    showButton.addEventListener("click", function () {
-        displayAllStudents(students);
-    });
+    showButton.addEventListener("click", loadStudents);
 }
