@@ -5,3 +5,10 @@
     { "name": "David", "course": "Computer Science", "year": 4 },
     { "name": "Esther", "course": "Statistics", "year": 2 }
 ]
+[
+    { "name": "Amina", "email": "amina@aston.com", "course": "Computer Science", "year": 2 },
+    { "name": "Brian", "email": "brian@aston.com", "course": "Business Studies", "year": 1 },
+    { "name": "Cynthia", "email": "cynthia@aston.com", "course": "Data Science", "year": 3 },
+    { "name": "David", "email": "david@aston.com", "course": "Computer Science", "year": 4 },
+    { "name": "Esther", "email": "esther@aston.com", "course": "Statistics", "year": 2 }
+]

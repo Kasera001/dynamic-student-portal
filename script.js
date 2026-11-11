@@ -28,19 +28,6 @@ for (let i = 1; i <= 5; i++) {
     console.log(i)
 }
 
-const form = document.getElementById("regForm");
-
-if (form) {
-    form.addEventListener("submit", function (event) {
-        const nameValue = document.getElementById("fullname").value;
-
-        if (nameValue.trim() === "") {
-            alert("Please enter your full name.");
-            event.preventDefault()
-        }
-
-    });
-}
 // ---------- Lab 8: functions, events and arrays ----------
 // An object holds related data as key: value pairs
 // Example: { name: "Amina", course: "Computer Science", year: 2 }
@@ -92,4 +79,80 @@ const showButton = document.getElementById("show-students");
 
 if (showButton) {
     showButton.addEventListener("click", loadStudents);
+}
+// ---------- Lab 10: OOP ----------
+class Student {
+    constructor(name, email, course, year) {
+        this.name = name;
+        this.email = email;
+        this.course = course;
+        this.year = year;
+    }
+
+    getSummary() {
+        return this.name + " - " + this.course + " (Year " + this.year + ") - " + this.email;
+    }
+}
+
+function addStudentToPage(student) {
+    const list = document.getElementById("student-list");
+    const item = document.createElement("li");
+    item.textContent = student.getSummary();   // the method replaces the long string
+    list.appendChild(item);
+}
+
+async function loadStudents() {
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = "";
+
+    try {
+        const response = await fetch("students.json");
+
+        if (!response.ok) {
+            throw new Error("Server answered with status " + response.status);
+        }
+
+        const data = await response.json();
+
+        // Turn each plain object from the JSON into a Student object
+        const students = data.map(function (s) {
+            return new Student(s.name, s.email, s.course, s.year);
+        });
+
+        displayAllStudents(students);
+    } catch (error) {
+        console.error("Fetch failed:", error);
+        errorMessage.textContent = "Could not load students: " + error.message;
+    }
+}
+// ---------- Lab 10: regex validation ----------
+const namePattern = /^[A-Za-z ]+$/;
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const form = document.getElementById("regForm");
+
+if (form) {
+    form.addEventListener("submit", function (event) {
+        const name = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const errorBox = document.getElementById("form-error");
+        const errors = [];
+
+        if (name === "") {
+            errors.push("Name cannot be empty.");
+        } else if (!namePattern.test(name)) {
+            errors.push("Name can only contain letters and spaces.");
+        }
+
+        if (!emailPattern.test(email)) {
+            errors.push("Enter a valid email, for example name@example.com.");
+        }
+
+        if (errors.length > 0) {
+            event.preventDefault();               // stop the form from submitting
+            errorBox.textContent = errors.join(" ");
+        } else {
+            errorBox.textContent = "";
+        }
+    });
 }
