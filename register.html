@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="width=device-width,initial-scale=1.0">
+        <title>Student Register</title>
+    </head>
+<body>
+    <header>
+        <h2>Aston Martin Student Portal</h2>
+        <nav>
+            <a href ="index.html">Home</a>
+            <a href ="timetable.html">Timetable</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Student Registration</h1>
+
+        <form>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+            <label for="course">Course of study</label>
+            <select id="course" name="course">
+                <option value="">Select a course</option>
+                <option>Bsc.Data Science</option>
+                <option>Bsc.Computer Science</option>
+                <option>Bsc.Information Technology</option>
+                <option>Bsc.Forensics</option>
+                <option>Bsc.Business in Information Technology</option>
+            </select>
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="'female" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="other" name="gender" value="Prefer not to say">
+                <label for="Prefer not to say">Prefee not to say</label>
+            </fieldset>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms</label>
+
+            <button type="submit">Register</button>
+            
+        </form>
+        <h2>Admission Requirements</h2>
+        <ul>
+            <li>KCSE certificate</li>
+            <li>Passport</li>
+            <li>Copy of national ID or Birth certficate</li>
+        </ul>
+        <h2>Registeration Steps</h2>
+        <ol>
+            <li>Fill in the registeration form</li>
+            <li>Submit your document</li>
+            <li>Collect your student ID</li>
+        </ol>
+    </main>
