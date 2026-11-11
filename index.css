@@ -1,4 +1,4 @@
-/* Class selectors start with a dot */
+
 .site-header {
     background-color: #1a3c6e;
     color: white;
@@ -26,14 +26,14 @@ color:#ff6b6b
 }
 
 .site-footer {
-    /* add: text-align, padding, background-color */
+    
     text-align: center;
     padding: 15%;
     background-color: #1a3c6e;
     color:white;
 }
 
-/* Id selector starts with a hash */
+
 #banner {
     width: 100%;
     border-radius: 8px;
@@ -66,7 +66,7 @@ color:#ff6b6b
 
 /* Registration form */
 .form {
-    /* add: max-width, padding, background-color: white */
+   
     max-width:500px;
     padding: 20px;
     background-color: white;
@@ -87,8 +87,7 @@ color:#ff6b6b
     box-sizing: border-box;
 }
 .btn-submit {
-    /* add: background-color, color, padding, border, cursor: pointer */
-background-color: #999;
+   
 color:whitesmoke;
 padding: 12px 20px;
 border:none;
@@ -126,5 +125,5 @@ fieldset {
 }
 
 .content {
-    min-height: 60vh;   /* keeps the footer near the bottom on short pages */
-}
+    min-height: 60vh;  
+ }
