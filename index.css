@@ -51,6 +51,9 @@ color:#ff6b6b
     padding: 10px;
     text-align: center;
 }
+.timetable caption{
+    font-weight: bold;
+}
 
 .timetable thead th {
     background-color: #1a3c6e;
