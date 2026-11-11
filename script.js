@@ -127,7 +127,7 @@ async function loadStudents() {
 }
 // ---------- Lab 10: regex validation ----------
 const namePattern = /^[A-Za-z ]+$/;
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailPattern = /^[^\s@]+@aston\.ac\.ke$/;
 
 const form = document.getElementById("regForm");
 
