@@ -40,4 +40,34 @@ if (form) {
         }
 
     });
+// ---------- Lab 8: functions, events and arrays ----------
+
+// An array: a list of values inside square brackets
+const students = ["Amina", "Brian", "Cynthia", "David", "Esther"];
+
+// A function that adds ONE student to the page
+function addStudentToPage(name) {
+    const list = document.getElementById("student-list");  // find the <ul>
+    const item = document.createElement("li");             // make a new <li>
+    item.textContent = name;                               // put the name inside it
+    list.appendChild(item);                                // add it to the <ul>
+}
+
+// A function that shows ALL students
+function displayAllStudents(students) {
+    const list = document.getElementById("student-list");
+    list.innerHTML = "";                                   // empty the list first
+
+    for (let i = 0; i < students.length; i++) {
+        addStudentToPage(students[i]);                     // one name per pass
+    }
+}
+
+// Run displayAllStudents when the button is clicked
+const showButton = document.getElementById("show-students");
+
+if (showButton) {
+    showButton.addEventListener("click", function () {
+        displayAllStudents(students);
+    });
 }
