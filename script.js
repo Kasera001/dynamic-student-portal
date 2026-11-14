@@ -1,4 +1,3 @@
-// Show all students and update the heading with the total.
 function displayAllStudents(students) {
     const list = document.getElementById("student-list");
     list.innerHTML = "";
@@ -60,8 +59,8 @@ async function loadStudents() {
         errorMessage.textContent = "Could not load students: " + error.message;
     }
 }
-const namePattern = /^[A-Za-z ]+$/;
-const emailPattern = /^[^\s@]+@aston\.ac\.ke$/;
+const namePattern = /^[A-Za-z ][A-Za-z '\-]*$/;
+const emailPattern = /^[^\s@]+@aston\.ac\.ke$/i;// the i checks for case
 
 const form = document.getElementById("regForm");
 
@@ -70,8 +69,20 @@ if (form) {
         const name = document.getElementById("fullname").value.trim();
         const email = document.getElementById("email").value.trim();
         const errorBox = document.getElementById("form-error");
+        const course = document.getElementById("course").value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const terms = document.getElementById("terms").checked;
         const errors = [];
+        
+        if (course === ""){ error.push("please enter a course");
 
+        }
+        if(!gender){error.push("Please select the gender options");
+
+        }
+        if (!terms){errors.push("You must agree to the terms");
+
+        }
         if (name === "") {
             errors.push("Name cannot be empty.");
         } else if (!namePattern.test(name)) {
@@ -79,9 +90,10 @@ if (form) {
         }
 
         if (!emailPattern.test(email)) {
-            errors.push("Enter a valid email, for example name@example.com.");
+            errors.push("use your school email, for example name@aston.ac.ke");
+        
+    
         }
-
         if (errors.length > 0) {
             event.preventDefault();               // stop the form from submitting
             errorBox.textContent = errors.join(" ");

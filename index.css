@@ -1,4 +1,28 @@
+**, *::before, *::after { box-sizing: border-box; }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background-color: #f4f6fa;
+}
+
+#banner { 
+    display: block; 
+    height: auto; 
+}
+
+.form-error, #error-message 
+{ 
+    color: #b00020; 
+    font-weight: bold; 
+}
+
+.btn-submit:hover,
+.btn-submit:focus-visible { background-color: #14305a; }
+
+.note { font-style: italic; }
 .site-header {
     background-color: #1a3c6e;
     color: white;
@@ -21,7 +45,7 @@
 }
 
 .main-nav a:hover,
-.main-nav a:visited {
+.main-nav a:focus-visible{
 text-decoration: underline;
 color:#ff6b6b;
 }
@@ -79,9 +103,10 @@ color:#ff6b6b;
     margin:0 auto;
 }
 
-.form label {
-    display: block;
-    margin-top: 12px;
+.form  fieldset label,
+.form input[type = "checkbox"] + label {
+    display: inline;
+    margin-top:  0 12px 0 4px;
 }
 .form input[type="text"],
 .form input[type="email"],

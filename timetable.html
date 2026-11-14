@@ -8,7 +8,7 @@
     </head>
 <body>
     <header class="site-header">
-        <h2>Aston Martin Student Portal</h2>
+        <h2>Aston Martin University Student Portal</h2>
         <nav class="main-nav">
             <a href ="index.html">Home</a>
             <a href ="timetable.html">Timetable</a>
@@ -21,17 +21,17 @@
                <caption>Class Lectures Timetable</caption>
                     <thead>
                     <tr>
-                       <th>Time</th>
-                       <th>Mon</th>
-                       <th>Tue</th>
-                       <th>Wed</th>
-                       <th>Thu</th>
-                       <th>Fri</th>
+                       <th scope ="col">Time</th>
+                       <th scope ="col">Mon</th>
+                       <th scope = "col">Tue</th>
+                       <th scope ="col">Wed</th>
+                       <th scope ="col">Thu</th>
+                       <th scope  ="col">Fri</th>
                     </tr>
                     </thead>
                 <tbody>
                    <tr>
-                      <th>8am - 10am</th>
+                      <th scope = "row">8am - 10am</th>
                       <td>Personal studies</td>
                       <td>Operating System</td>
                       <td>Submit Assignments</td>
@@ -39,7 +39,7 @@
                       <td>Rest</td>
                     </tr>
                     <tr>
-                      <th>10am - 12 noon</th>
+                      <th scope  = "row">10am - 12 noon</th>
                       <td>Web Application Development</td>
                       <td>Statistical Analysis with R</td>
                       <td>Project</td>
@@ -47,12 +47,16 @@
                       <td>Rest</td>
                     </tr>
                     <tr>
-                      <th>12 noon - 1pm</th>
+                      <th scope = "row">12 noon - 1pm</th>
                       <td>Data Mining and Data Warehousing</td>
                       <td>Assignments and CATS</td>
                       <td>Chapel Service</td>
                       <td>Lunch Break</td>
                       <td>Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <th scope ="row">1pm - 2pm</th>
+                        <td class ="break" colspan="5">Lunch Break</td>
                     </tr>
                     <tr>
                        <th>2pm - 4pm</th>
@@ -66,5 +70,9 @@
             </table>
             <p class="note">Check with your lecturer for any room changes.</p>
     </main>
+    <footer>
+      &copy; 2026 Aston Martin University, Scotland
+    </footer>
+        
 </body>
 </html>
