@@ -1,7 +1,7 @@
 [
-    { "name": "Amina", "email": "amina@aston.ac.ke", "course": "Computer Science", "year": 2 },
-    { "name": "Brian", "email": "brian@aston.ac.ke", "course": "Business Studies", "year": 1 },
-    { "name": "Cynthia", "email": "cynthia@aston.ac.ke", "course": "Data Science", "year": 3 },
-    { "name": "David", "email": "david@aston.ac.ke", "course": "Computer Science", "year": 4 },
-    { "name": "Esther", "email": "esther@aston.ac.ke", "course": "Statistics", "year": 2 }
+    { "name": "Amina", "email": "amina@aston.ac.ke", "course": "Bsc. Computer Science", "year": 2 },
+    { "name": "Brian", "email": "brian@aston.ac.ke", "course": " BSc Business In Informaton Technology", "year": 1 },
+    { "name": "Cynthia", "email": "cynthia@aston.ac.ke", "course": " Bsc.Data Science", "year": 3 },
+    { "name": "David", "email": "david@aston.ac.ke", "course": "BSc.Computer Science", "year": 4 },
+    { "name": "Esther", "email": "esther@aston.ac.ke", "course": "Bsc Forensic", "year": 2 }
 ]
