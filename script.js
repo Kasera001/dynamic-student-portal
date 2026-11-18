@@ -74,19 +74,19 @@ if (form) {
         const terms = document.getElementById("terms").checked;
         const errors = [];
         
-        if (course === ""){ error.push("please enter a course");
-
+        if (course === "") {
+            errors.push("Please select a course.");
         }
-        if(!gender){error.push("Please select the gender options");
-
+        if (!gender) {
+            errors.push("Please select a gender option.");
         }
-        if (!terms){errors.push("You must agree to the terms");
-
+        if (!terms) {
+            errors.push("You must agree to the terms.");
         }
         if (name === "") {
             errors.push("Name cannot be empty.");
         } else if (!namePattern.test(name)) {
-            errors.push("Name can only contain letters and spaces.");
+            errors.push("Name can only contain letters, spaces, apostrophes, and hyphens.");
         }
 
         if (!emailPattern.test(email)) {
